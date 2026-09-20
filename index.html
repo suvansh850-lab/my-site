@@ -6,122 +6,21 @@
   <meta name="description" content="Download DocVault for Windows and Android." />
   <title>DocVault · Downloads</title>
   <style>
-    :root {
-      --bg: #f4f7ff;
-      --surface: rgba(255, 255, 255, .78);
-      --surface-solid: #fff;
-      --text: #17203a;
-      --muted: #65708d;
-      --primary: #6256e8;
-      --primary-dark: #4d42c9;
-      --secondary: #17b890;
-      --border: rgba(45, 55, 110, .13);
-      --shadow: 0 24px 70px rgba(54, 64, 143, .16);
-      --glow: rgba(98, 86, 232, .2);
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      color: var(--text);
-      background: var(--bg);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      overflow-x: hidden;
-      transition: background .3s, color .3s;
-    }
-    body.dark {
-      --bg: #101323;
-      --surface: rgba(28, 34, 59, .78);
-      --surface-solid: #1c223b;
-      --text: #f3f5ff;
-      --muted: #aab2d0;
-      --border: rgba(255, 255, 255, .12);
-      --shadow: 0 24px 70px rgba(0, 0, 0, .32);
-      --glow: rgba(98, 86, 232, .28);
-    }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; cursor: pointer; }
-
-    .orb { position: fixed; z-index: -1; border-radius: 50%; filter: blur(3px); pointer-events: none; opacity: .72; }
-    .orb.one { width: 30rem; height: 30rem; top: -12rem; right: -9rem; background: #d9d4ff; }
-    .orb.two { width: 25rem; height: 25rem; bottom: -12rem; left: -10rem; background: #c4f5e7; }
-    .dark .orb.one { background: #302866; }
-    .dark .orb.two { background: #124e47; }
-
-    nav, main, footer { max-width: 1080px; margin: auto; }
-    nav { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; }
-    .logo { font-weight: 850; font-size: 1.15rem; letter-spacing: -.05em; }
-    .logo span { color: var(--primary); }
-    .nav-links { display: flex; align-items: center; gap: 1.4rem; color: var(--muted); font-size: .92rem; }
-    .nav-links a:hover { color: var(--primary); }
-    .icon-button { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 999px; padding: .55rem .72rem; }
-
-    main { padding: 3.7rem 1.5rem 5rem; }
-    .hero { display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 4rem; min-height: 65vh; }
-    .eyebrow { display: inline-flex; gap: .45rem; align-items: center; color: var(--primary); font-weight: 750; font-size: .85rem; }
-    .eyebrow::before { content: "✦"; }
-    h1 { max-width: 650px; margin: 1rem 0; font-size: clamp(3.1rem, 8vw, 6.2rem); line-height: .94; letter-spacing: -.08em; }
-    h1 .gradient { background: linear-gradient(120deg, var(--primary), #e84393, var(--secondary)); -webkit-background-clip: text; color: transparent; }
-    .intro { max-width: 520px; color: var(--muted); font-size: 1.12rem; line-height: 1.7; }
-    .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
-    .button { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; border: 0; border-radius: 999px; padding: .88rem 1.2rem; font-weight: 750; transition: transform .2s, box-shadow .2s, background .2s; }
-    .button:hover { transform: translateY(-3px); box-shadow: 0 10px 25px var(--glow); }
-    .button.primary { color: #fff; background: var(--primary); }
-    .button.primary:hover { background: var(--primary-dark); }
-    .button.ghost { color: var(--text); border: 1px solid var(--border); background: var(--surface); }
-
-    .hero-card { position: relative; padding: 2rem; border: 1px solid var(--border); border-radius: 2rem; background: var(--surface); box-shadow: var(--shadow); backdrop-filter: blur(14px); transform: rotate(2deg); transition: transform .35s; }
-    .hero-card:hover { transform: rotate(0) translateY(-8px); }
-    .app-icon { display: grid; place-items: center; width: 5.4rem; height: 5.4rem; margin-bottom: 1.3rem; border-radius: 1.5rem; color: #fff; background: linear-gradient(135deg, #a29bfe, #00b894); font-size: 2.5rem; box-shadow: 0 14px 28px rgba(0, 184, 148, .22); }
-    .hero-card h2 { margin: 0 0 .4rem; font-size: 1.65rem; }
-    .hero-card p { color: var(--muted); line-height: 1.6; }
-    .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.5rem; }
-    .chip { padding: .45rem .7rem; border-radius: 999px; background: rgba(98, 86, 232, .12); color: var(--primary); font-size: .8rem; font-weight: 750; }
-    .sparkle { position: absolute; font-size: 1.8rem; animation: float 3s ease-in-out infinite; }
-    .sparkle.a { right: 1.5rem; top: 1.5rem; }
-    .sparkle.b { bottom: 1.5rem; right: 2.5rem; animation-delay: 1s; }
-    @keyframes float { 50% { transform: translateY(-10px) rotate(10deg); } }
-
-    section { padding-top: 4rem; }
-    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1.3rem; }
-    h2 { margin: 0; font-size: 2rem; letter-spacing: -.05em; }
-    .section-heading p { margin: 0; color: var(--muted); }
-    .downloads { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-    .download-card { display: flex; flex-direction: column; padding: 1.5rem; border: 1px solid var(--border); border-radius: 1.3rem; background: var(--surface); box-shadow: 0 12px 35px rgba(54, 64, 143, .07); transition: transform .25s, border-color .25s; }
-    .download-card:hover { transform: translateY(-6px); border-color: var(--primary); }
-    .download-top { display: flex; align-items: center; gap: .9rem; }
-    .platform-icon { display: grid; place-items: center; width: 3.2rem; height: 3.2rem; border-radius: 1rem; color: #fff; font-size: 1.45rem; background: linear-gradient(135deg, var(--primary), #8e7dff); }
-    .download-card.android .platform-icon { background: linear-gradient(135deg, #00a884, #79d858); }
-    .download-card h3 { margin: 0; font-size: 1.18rem; }
-    .download-card small { color: var(--muted); }
-    .download-card p { min-height: 3.2rem; color: var(--muted); line-height: 1.55; }
-    .download-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: auto; }
-    .download-actions .button { font-size: .9rem; padding: .7rem .95rem; }
-    .copy-button { color: var(--text); border: 1px solid var(--border); background: transparent; }
-    .copy-button:hover { background: rgba(98, 86, 232, .1); }
-
-    .info { margin-top: 1rem; padding: 1.3rem 1.5rem; border-left: 4px solid var(--secondary); border-radius: .9rem; background: var(--surface); color: var(--muted); line-height: 1.6; }
-    footer { padding: 2rem 1.5rem; text-align: center; color: var(--muted); }
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s, transform .7s; }
-    .reveal.visible { opacity: 1; transform: none; }
-    .toast { position: fixed; left: 50%; bottom: 1.5rem; padding: .8rem 1.1rem; border-radius: 999px; background: var(--text); color: var(--bg); transform: translate(-50%, 150%); transition: transform .3s; z-index: 5; }
-    .toast.show { transform: translate(-50%, 0); }
-    @media (max-width: 760px) {
-      .hero { grid-template-columns: 1fr; gap: 2rem; min-height: auto; }
-      .hero-card { max-width: 500px; }
-      .downloads { grid-template-columns: 1fr; }
-      .nav-links a { display: none; }
-      main { padding-top: 2.5rem; }
-    }
+    :root{--bg:#f4f7ff;--surface:rgba(255,255,255,.78);--text:#17203a;--muted:#65708d;--primary:#6256e8;--primary-dark:#4d42c9;--secondary:#17b890;--border:rgba(45,55,110,.13);--shadow:0 24px 70px rgba(54,64,143,.16);--glow:rgba(98,86,232,.2)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--text);background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden;transition:background .3s,color .3s}body.dark{--bg:#101323;--surface:rgba(28,34,59,.78);--text:#f3f5ff;--muted:#aab2d0;--border:rgba(255,255,255,.12);--shadow:0 24px 70px rgba(0,0,0,.32);--glow:rgba(98,86,232,.28)}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+    .orb{position:fixed;z-index:-1;border-radius:50%;filter:blur(3px);pointer-events:none;opacity:.72}.orb.one{width:30rem;height:30rem;top:-12rem;right:-9rem;background:#d9d4ff}.orb.two{width:25rem;height:25rem;bottom:-12rem;left:-10rem;background:#c4f5e7}.dark .orb.one{background:#302866}.dark .orb.two{background:#124e47}
+    nav,main,footer{max-width:1080px;margin:auto}nav{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 1.5rem}.logo{font-weight:850;font-size:1.15rem;letter-spacing:-.05em}.logo span{color:var(--primary)}.nav-links{display:flex;align-items:center;gap:1.4rem;color:var(--muted);font-size:.92rem}.nav-links a:hover{color:var(--primary)}.icon-button{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;padding:.55rem .72rem}
+    main{padding:3.7rem 1.5rem 5rem}.hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:4rem;min-height:65vh}.eyebrow{display:inline-flex;gap:.45rem;align-items:center;color:var(--primary);font-weight:750;font-size:.85rem}.eyebrow:before{content:"✦"}h1{max-width:650px;margin:1rem 0;font-size:clamp(3.1rem,8vw,6.2rem);line-height:.94;letter-spacing:-.08em}h1 .gradient{background:linear-gradient(120deg,var(--primary),#e84393,var(--secondary));-webkit-background-clip:text;color:transparent}.intro{max-width:520px;color:var(--muted);font-size:1.12rem;line-height:1.7}.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}.button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:0;border-radius:999px;padding:.88rem 1.2rem;font-weight:750;transition:transform .2s,box-shadow .2s,background .2s}.button:hover{transform:translateY(-3px);box-shadow:0 10px 25px var(--glow)}.button.primary{color:#fff;background:var(--primary)}.button.primary:hover{background:var(--primary-dark)}.button.ghost{color:var(--text);border:1px solid var(--border);background:var(--surface)}
+    .hero-card{position:relative;padding:2rem;border:1px solid var(--border);border-radius:2rem;background:var(--surface);box-shadow:var(--shadow);backdrop-filter:blur(14px);transform:rotate(2deg);transition:transform .35s}.hero-card:hover{transform:rotate(0) translateY(-8px)}.app-icon{display:grid;place-items:center;width:5.4rem;height:5.4rem;margin-bottom:1.3rem;border-radius:1.5rem;color:#fff;background:linear-gradient(135deg,#a29bfe,#00b894);font-size:2.5rem;box-shadow:0 14px 28px rgba(0,184,148,.22)}.hero-card h2{margin:0 0 .4rem;font-size:1.65rem}.hero-card p{color:var(--muted);line-height:1.6}.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem}.chip{padding:.45rem .7rem;border-radius:999px;background:rgba(98,86,232,.12);color:var(--primary);font-size:.8rem;font-weight:750}.sparkle{position:absolute;font-size:1.8rem;animation:float 3s ease-in-out infinite}.sparkle.a{right:1.5rem;top:1.5rem}.sparkle.b{bottom:1.5rem;right:2.5rem;animation-delay:1s}@keyframes float{50%{transform:translateY(-10px) rotate(10deg)}}
+    section{padding-top:4rem}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.3rem}h2{margin:0;font-size:2rem;letter-spacing:-.05em}.section-heading p{margin:0;color:var(--muted)}.downloads{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.download-card{display:flex;flex-direction:column;padding:1.5rem;border:1px solid var(--border);border-radius:1.3rem;background:var(--surface);box-shadow:0 12px 35px rgba(54,64,143,.07);transition:transform .25s,border-color .25s}.download-card:hover{transform:translateY(-6px);border-color:var(--primary)}.download-top{display:flex;align-items:center;gap:.9rem}.platform-icon{display:grid;place-items:center;width:3.2rem;height:3.2rem;border-radius:1rem;color:#fff;font-size:1.45rem;background:linear-gradient(135deg,var(--primary),#8e7dff)}.download-card.android .platform-icon{background:linear-gradient(135deg,#00a884,#79d858)}.download-card h3{margin:0;font-size:1.18rem}.download-card small{color:var(--muted)}.download-card p{min-height:3.2rem;color:var(--muted);line-height:1.55}.download-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:auto}.download-actions .button{font-size:.9rem;padding:.7rem .95rem}.copy-button{color:var(--text);border:1px solid var(--border);background:transparent}.copy-button:hover{background:rgba(98,86,232,.1)}.info{margin-top:1rem;padding:1.3rem 1.5rem;border-left:4px solid var(--secondary);border-radius:.9rem;background:var(--surface);color:var(--muted);line-height:1.6}footer{padding:2rem 1.5rem;text-align:center;color:var(--muted)}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}.toast{position:fixed;left:50%;bottom:1.5rem;padding:.8rem 1.1rem;border-radius:999px;background:var(--text);color:var(--bg);transform:translate(-50%,150%);transition:transform .3s;z-index:5}.toast.show{transform:translate(-50%,0)}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;gap:2rem;min-height:auto}.hero-card{max-width:500px}.downloads{grid-template-columns:1fr}.nav-links a{display:none}main{padding-top:2.5rem}}
   </style>
 </head>
 <body>
   <div class="orb one"></div><div class="orb two"></div>
   <nav>
     <a class="logo" href="#top">Doc<span>Vault</span>.</a>
-    <div class="nav-links"><a href="#downloads">Downloads</a><a href="https://github.com/suvansh850-lab/my-site/releases/tag/Pre-1.0.0" target="_blank" rel="noopener">Release notes ↗</a></div>
+    <div class="nav-links"><a href="#downloads">Downloads</a></div>
     <button class="icon-button" id="themeToggle" aria-label="Toggle dark mode">☾</button>
   </nav>
 
@@ -131,7 +30,7 @@
         <div class="eyebrow">Simple downloads, ready to go</div>
         <h1>Get <span class="gradient">DocVault</span> on your device.</h1>
         <p class="intro">Choose your platform below to download the latest DocVault release. Fast, simple, and available for Windows and Android.</p>
-        <div class="actions"><a class="button primary" href="#downloads">View downloads ↓</a><a class="button ghost" href="https://github.com/suvansh850-lab/my-site/releases/tag/Pre-1.0.0" target="_blank" rel="noopener">View on GitHub ↗</a></div>
+        <div class="actions"><a class="button primary" href="#downloads">View downloads ↓</a></div>
       </div>
       <div class="hero-card reveal" aria-label="DocVault introduction card">
         <span class="sparkle a">✦</span><span class="sparkle b">✧</span>
@@ -163,40 +62,17 @@
   <footer>Made with curiosity and a little bit of code · <span id="year"></span></footer>
   <div class="toast" id="toast" role="status" aria-live="polite">Link copied!</div>
   <script>
-    const body = document.body;
-    const themeToggle = document.querySelector('#themeToggle');
-    if (localStorage.getItem('theme') === 'dark') body.classList.add('dark');
-    function updateThemeIcon() { themeToggle.textContent = body.classList.contains('dark') ? '☀' : '☾'; }
+    const body=document.body,themeToggle=document.querySelector('#themeToggle');
+    if(localStorage.getItem('theme')==='dark')body.classList.add('dark');
+    function updateThemeIcon(){themeToggle.textContent=body.classList.contains('dark')?'☀':'☾'}
     updateThemeIcon();
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark');
-      localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
-      updateThemeIcon();
-    });
-
-    const toast = document.querySelector('#toast');
-    function showToast(message) {
-      toast.textContent = message;
-      toast.classList.add('show');
-      window.clearTimeout(window.toastTimer);
-      window.toastTimer = window.setTimeout(() => toast.classList.remove('show'), 2400);
-    }
-    document.querySelectorAll('.copy-button').forEach(button => {
-      button.addEventListener('click', async () => {
-        try {
-          await navigator.clipboard.writeText(button.dataset.url);
-          showToast('Download link copied!');
-        } catch {
-          showToast('Copy failed — right-click the download button to copy it.');
-        }
-      });
-    });
-
-    document.querySelector('#year').textContent = new Date().getFullYear();
-    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    }), { threshold: .15 });
-    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    themeToggle.addEventListener('click',()=>{body.classList.toggle('dark');localStorage.setItem('theme',body.classList.contains('dark')?'dark':'light');updateThemeIcon()});
+    const toast=document.querySelector('#toast');
+    function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}
+    document.querySelectorAll('.copy-button').forEach(button=>button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(button.dataset.url);showToast('Download link copied!')}catch{showToast('Copy failed — right-click the download button to copy it.')}}));
+    document.querySelector('#year').textContent=new Date().getFullYear();
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));
   </script>
 </body>
 </html>
