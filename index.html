@@ -6,65 +6,52 @@
   <meta name="description" content="Download DocVault for Windows and Android." />
   <title>DocVault · Downloads</title>
   <style>
-    :root{--bg:#f4f7ff;--surface:rgba(255,255,255,.8);--text:#17203a;--muted:#65708d;--primary:#6256e8;--primary-dark:#4d42c9;--secondary:#17b890;--border:rgba(45,55,110,.13);--shadow:0 24px 70px rgba(73,86,160,.15)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;min-height:100vh;color:var(--text);background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a,button{font:inherit}img{max-width:100%}body.dark{--bg:#0c1222;--surface:rgba(15,23,40,.75);--text:#edf3ff;--muted:#9aa8c8;--primary:#8b82ff;--primary-dark:#7366eb;--secondary:#29d4ab;--border:rgba(164,178,224,.12);--shadow:0 20px 60px rgba(0,0,0,.35)}.orb{position:fixed;z-index:-1;border-radius:50%;filter:blur(3px);pointer-events:none;opacity:.72}.orb.one{width:30rem;height:30rem;top:-12rem;right:-9rem;background:#d9d4ff}.orb.two{width:25rem;height:25rem;bottom:-14rem;left:-8rem;background:#cfeafc}.hero-card,.download-card,.info,.icon-button,.button{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.button:hover,.icon-button:hover,.download-card:hover,.hero-card:hover{transform:translateY(-2px)}
-    nav,main,footer{width:min(100% - 3rem,1080px);margin-inline:auto}nav{display:flex;align-items:center;justify-content:space-between;padding:1.25rem 0}.logo{display:inline-flex;align-items:center;gap:.75rem;font-size:clamp(1.4rem,2vw,1.9rem);font-weight:800;letter-spacing:-.06em}.logo span:last-child{display:inline-flex;align-items:baseline;gap:.15em}.logo span:last-child span{color:var(--primary)}.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:2.75rem;height:2.75rem;flex-shrink:0}.brand-mark svg{display:block;width:100%;height:100%}.icon-button{background:rgba(255,255,255,.62);border:1px solid var(--border);border-radius:999px;padding:.75rem .9rem;cursor:pointer;color:var(--text);box-shadow:0 8px 22px rgba(31,41,55,.08)}
-    main{padding:clamp(2rem,6vw,3.7rem) 0 5rem}.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);align-items:center;gap:clamp(2rem,6vw,4rem);min-height:min(65vh,700px)}.eyebrow{display:inline-block;padding:.55rem .8rem;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.45);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-    h1{margin:.9rem 0 0;font-size:clamp(2.8rem,5vw,5rem);line-height:0.98;letter-spacing:-.07em}.gradient{background:linear-gradient(120deg,var(--primary),#8a7dff 38%,#2ac6c9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.intro{margin:1.2rem 0 0;max-width:34rem;font-size:1.05rem;line-height:1.7;color:var(--muted)}.actions,.download-actions{display:flex;flex-wrap:wrap;gap:.9rem}.button{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.9rem 1.35rem;border-radius:999px;border:1px solid transparent;text-decoration:none;font-weight:700;cursor:pointer}.button.primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:white;box-shadow:0 14px 30px rgba(98,86,232,.32)}.button.secondary{border-color:var(--border);background:rgba(255,255,255,.3);color:var(--text)}
-    .hero-card{position:relative;padding:clamp(1.5rem,4vw,2rem);border:1px solid var(--border);border-radius:2rem;background:var(--surface);box-shadow:var(--shadow);backdrop-filter:blur(14px);transform:translateY(0)}.sparkle{position:absolute;font-size:1.5rem;color:var(--secondary);opacity:.9}.sparkle.a{top:1.1rem;right:1.4rem}.sparkle.b{bottom:1.2rem;left:1.2rem}.app-icon{display:grid;place-items:center;width:min(17rem,100%);height:min(17rem,100%);margin:0 auto 1rem;border-radius:1.8rem;background:radial-gradient(circle at top,#fff 0%,#eaf0ff 30%,#dde8ff 100%);border:1px solid var(--border);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 18px 38px rgba(81,94,163,.12)}.app-icon svg{width:62%;height:62%}.hero-card h2{margin:0;font-size:clamp(1.45rem,2.4vw,2.2rem);letter-spacing:-.05em}.hero-card p{margin:.7rem 0 0;color:var(--muted);line-height:1.6}.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}.chip{padding:.45rem .8rem;border-radius:999px;background:rgba(98,86,232,.08);border:1px solid rgba(98,86,232,.12);font-size:.78rem;font-weight:700;color:var(--primary)}
-    section{padding-top:clamp(3rem,7vw,4rem)}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.3rem}.section-heading h2{margin:0;font-size:clamp(1.65rem,3vw,2.7rem);letter-spacing:-.05em}.section-heading p{margin:0;color:var(--muted);font-weight:600}.downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem}.download-card{padding:1.3rem 1.25rem 1.1rem;border:1px solid var(--border);border-radius:1.5rem;background:rgba(255,255,255,.55);box-shadow:0 18px 35px rgba(50,63,100,.08)}.download-card.android{background:linear-gradient(180deg,rgba(22,184,144,.08),rgba(255,255,255,.55))}.download-top{display:flex;align-items:center;gap:.85rem;margin-bottom:.8rem}.platform-icon{display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:linear-gradient(135deg,#f7d56d,#f0b43d);font-size:1.5rem;color:#1d2a4a;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}.download-card h3{margin:0;font-size:1.25rem;letter-spacing:-.03em}.download-card small{display:block;margin-top:.2rem;color:var(--muted)}.download-card p{margin:0 0 1rem;color:var(--muted);line-height:1.6}.download-actions{margin-top:auto}.info{margin-top:1rem;padding:.9rem 1rem;border:1px solid var(--border);border-radius:1rem;background:rgba(255,255,255,.4);color:var(--text)}
-    footer{padding:2rem 0 3rem;color:var(--muted);text-align:center}.toast{position:fixed;right:1rem;bottom:1rem;transform:translateY(1rem);opacity:0;pointer-events:none;padding:.7rem 1rem;border-radius:999px;background:#17213b;color:#fff;box-shadow:0 18px 35px rgba(12,17,30,.25);transition:all .2s ease}.toast.show{opacity:1;transform:translateY(0)}
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}
-    @media (max-width: 1024px){.hero{gap:2.5rem}}
-    @media (max-width: 768px){nav,main,footer{width:min(100% - 2rem,560px)} nav{padding:.9rem 0}.hero{grid-template-columns:1fr;gap:2rem;min-height:auto}.downloads{grid-template-columns:1fr}.hero-card{max-width:520px;margin-inline:auto}.section-heading{flex-direction:column;align-items:flex-start}.app-icon{max-width:13rem}}
-    @media (max-width: 480px){nav,main,footer{width:calc(100% - 1.5rem)} h1{font-size:clamp(2.65rem,14vw,3.4rem)}.eyebrow{font-size:.78rem}.actions,.download-actions{flex-direction:column;align-items:stretch}.button{width:100%}}
-    @media (prefers-reduced-motion: reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+    :root{--bg:#f7f8fc;--surface:#fff;--surface-soft:#f0f2f8;--text:#151827;--muted:#73798d;--line:#e5e7ef;--primary:#635bff;--primary-dark:#4b45d8;--green:#19b88b;--shadow:0 20px 60px rgba(28,35,75,.1)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;min-height:100vh;color:var(--text);background:var(--bg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a,button{font:inherit}button{cursor:pointer}body.dark{--bg:#10121c;--surface:#191c29;--surface-soft:#222638;--text:#f5f6ff;--muted:#a5abc0;--line:#303548;--primary:#827aff;--primary-dark:#6860ed;--shadow:0 20px 60px rgba(0,0,0,.3)}
+    .page{width:min(100% - 2rem,1180px);margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;padding:1.3rem 0}.wordmark{font-size:1.35rem;font-weight:850;letter-spacing:-.06em}.wordmark span{color:var(--primary)}.nav-links{display:flex;align-items:center;gap:1.5rem}.nav-links a{color:var(--muted);font-size:.9rem;font-weight:700;text-decoration:none}.nav-links a:hover{color:var(--primary)}.theme-toggle{display:grid;place-items:center;width:2.6rem;height:2.6rem;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--text);box-shadow:0 5px 15px rgba(0,0,0,.05)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);align-items:center;gap:clamp(3rem,8vw,7rem);padding:clamp(4rem,10vw,8rem) 0 6rem}.kicker{display:inline-flex;align-items:center;gap:.55rem;color:var(--primary);font-size:.78rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.kicker:before{content:"";width:2rem;height:2px;background:var(--primary)}h1{max-width:650px;margin:1rem 0 1.25rem;font-size:clamp(3rem,7vw,6.5rem);line-height:.95;letter-spacing:-.09em}h1 em{font-style:normal;color:var(--primary)}.hero-copy{max-width:530px;color:var(--muted);font-size:1.08rem;line-height:1.75}.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:2rem}.button{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;border:0;border-radius:.8rem;padding:.95rem 1.25rem;font-weight:800;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}.button:hover{transform:translateY(-2px)}.button.primary{background:var(--primary);color:#fff;box-shadow:0 12px 25px rgba(99,91,255,.25)}.button.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+    .preview{position:relative;min-height:390px;display:grid;place-items:center}.preview:before{content:"";position:absolute;inset:5% -8% 5% 8%;border-radius:2.5rem;background:linear-gradient(145deg,#e7e8ff,#d8f5ee);transform:rotate(5deg)}.preview-card{position:relative;width:min(100%,370px);padding:1.25rem;border:1px solid rgba(255,255,255,.75);border-radius:1.5rem;background:rgba(255,255,255,.78);box-shadow:var(--shadow);backdrop-filter:blur(18px);transform:rotate(-4deg)}body.dark .preview-card{background:rgba(28,32,47,.82);border-color:rgba(255,255,255,.1)}.window-bar{display:flex;gap:.35rem;padding:.2rem 0 1.1rem}.window-bar i{width:.55rem;height:.55rem;border-radius:50%;background:#ff827d}.window-bar i:nth-child(2){background:#f8c85b}.window-bar i:nth-child(3){background:#61d8a5}.preview-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem}.preview-title strong{font-size:1.25rem}.status{padding:.35rem .6rem;border-radius:999px;background:#d9f8ed;color:#118463;font-size:.7rem;font-weight:800}.document-list{display:grid;gap:.7rem}.document{display:flex;align-items:center;gap:.8rem;padding:.85rem;border:1px solid var(--line);border-radius:.8rem;background:var(--surface)}.document-icon{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:.65rem;background:#eeeaff;color:var(--primary);font-weight:900}.document small{display:block;margin-top:.2rem;color:var(--muted)}
+    .section{padding:1rem 0 5rem}.section-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.5rem}.section-head h2{margin:0;font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.07em}.section-head p{margin:0;color:var(--muted)}.download-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.download-card{display:flex;flex-direction:column;min-height:275px;padding:1.5rem;border:1px solid var(--line);border-radius:1.25rem;background:var(--surface);box-shadow:0 8px 25px rgba(30,40,80,.04)}.download-card.featured{color:#fff;border-color:transparent;background:linear-gradient(135deg,#635bff,#8b76e9)}..download-card.featured p,.download-card.featured small{color:rgba(255,255,255,.76)}.download-card.featured .platform{background:rgba(255,255,255,.18);color:#fff}.download-card.featured .button.primary{background:#fff;color:#544bdf;box-shadow:none}.platform{display:grid;place-items:center;width:3.25rem;height:3.25rem;margin-bottom:1.25rem;border-radius:1rem;background:var(--surface-soft);color:var(--primary);font-size:1.6rem;font-weight:900}.download-card h3{margin:0;font-size:1.35rem;letter-spacing:-.04em}.download-card small{display:block;margin-top:.35rem;color:var(--muted);font-weight:700}.download-card p{margin:1rem 0 auto;color:var(--muted);line-height:1.6}.download-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.5rem}.download-actions .button{padding:.75rem 1rem;font-size:.88rem}.featured .button.ghost{border-color:rgba(255,255,255,.35);color:#fff}.tip{display:flex;align-items:center;gap:.7rem;margin-top:1rem;padding:1rem 1.15rem;border:1px solid var(--line);border-radius:1rem;background:var(--surface);color:var(--muted);font-size:.9rem}.tip strong{color:var(--text)}footer{padding:1rem 0 3rem;color:var(--muted);font-size:.9rem;text-align:center}.toast{position:fixed;right:1rem;bottom:1rem;padding:.8rem 1rem;border-radius:.7rem;background:#171a29;color:#fff;box-shadow:var(--shadow);opacity:0;transform:translateY(1rem);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:none}
+    @media(max-width:800px){.nav-links a{display:none}.hero{grid-template-columns:1fr;padding:4rem 0}.preview{order:-1;min-height:300px}.preview-card{max-width:340px}.download-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:.5rem}}
+    @media(max-width:480px){.page{width:min(100% - 1.25rem,1180px)}h1{font-size:clamp(3rem,16vw,4.5rem)}.hero-actions,.download-actions{align-items:stretch;flex-direction:column}.button{width:100%}.preview:before{inset:5% 0}.preview-card{transform:none}}
   </style>
 </head>
 <body>
-  <div class="orb one"></div><div class="orb two"></div>
-  <nav>
-    <div class="logo" aria-label="DocVault logo">
-      <span>Doc<span>Vault</span>.</span>
-    </div>
-    <button class="icon-button" id="themeToggle" aria-label="Toggle dark mode">☾</button>
-  </nav>
+  <header class="page topbar">
+    <a class="wordmark" href="#top" aria-label="DocVault home">Doc<span>Vault</span>.</a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#downloads">Downloads</a><a href="#about">About</a><button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">☾</button></nav>
+  </header>
 
-  <main id="top">
+  <main id="top" class="page">
     <section class="hero">
-      <div class="reveal">
-        <div class="eyebrow">Simple downloads, ready to go</div>
-        <h1>Get <span class="gradient">DocVault</span> on your device.</h1>
-        <p class="intro">Choose your platform below to download the latest DocVault release. Fast, simple, and available for Windows and Android.</p>
-        <div class="actions"><a class="button primary" href="#downloads">View downloads ↓</a></div>
+      <div>
+        <div class="kicker">Your documents, simplified</div>
+        <h1>Everything important, <em>in one place.</em></h1>
+        <p class="hero-copy">DocVault keeps your files organized, accessible, and secure. Download the latest version for your device and get started in seconds.</p>
+        <div class="hero-actions"><a class="button primary" href="#downloads">Explore downloads ↓</a><a class="button ghost" href="#about">Learn more</a></div>
       </div>
-      <div class="hero-card reveal" aria-label="DocVault introduction card">
-        <span class="sparkle a">✦</span><span class="sparkle b">✧</span>
-        <h2>DocVault Pre-1.0.0</h2>
-        <p>Your documents, organized and ready whenever you need them.</p>
-        <div class="chips"><span class="chip">Windows</span><span class="chip">Android</span><span class="chip">Free download</span></div>
+      <div class="preview" aria-label="DocVault app preview">
+        <div class="preview-card">
+          <div class="window-bar"><i></i><i></i><i></i></div>
+          <div class="preview-title"><strong>My documents</strong><span class="status">Protected</span></div>
+          <div class="document-list"><div class="document"><span class="document-icon">PDF</span><div><strong>Project brief</strong><small>Updated today</small></div></div><div class="document"><span class="document-icon">DOC</span><div><strong>Meeting notes</strong><small>Updated yesterday</small></div></div><div class="document"><span class="document-icon">ZIP</span><div><strong>Design assets</strong><small>Updated 3 days ago</small></div></div></div>
+        </div>
       </div>
     </section>
 
-    <section id="downloads" class="reveal">
-      <div class="section-heading"><h2>Choose your platform</h2><p>Latest release · Pre-1.0.0</p></div>
-      <div class="downloads">
-        <article class="download-card">
-          <div class="download-top"><div class="platform-icon">⊞</div><div><h3>Windows</h3><small>DocVault.exe</small></div></div>
-          <p>Download the desktop version for Windows computers.</p>
-          <div class="download-actions"><a class="button primary" href="https://github.com/suvansh850-lab/my-site/releases/download/Pre-1.0.0/DocVault.exe" download>Download .exe ↓</a><button class="button secondary copy-button" data-url="https://github.com/suvansh850-lab/my-site/releases/download/Pre-1.0.0/DocVault.exe">Copy link</button></div>
-        </article>
-        <article class="download-card android">
-          <div class="download-top"><div class="platform-icon">◆</div><div><h3>Android</h3><small>DocVault.apk</small></div></div>
-          <p>Download and install the Android app on your phone or tablet.</p>
-          <div class="download-actions"><a class="button primary" href="https://github.com/suvansh850-lab/my-site/releases/download/Pre-1.0.0/DocVault.apk" download>Download .apk ↓</a><button class="button secondary copy-button" data-url="https://github.com/suvansh850-lab/my-site/releases/download/Pre-1.0.0/DocVault.apk">Copy link</button></div>
-        </article>
+    <section id="downloads" class="section">
+      <div class="section-head"><div><div class="kicker">Get the app</div><h2>Choose your platform</h2></div><p>Latest release · Pre-1.0.0</p></div>
+      <div class="download-grid">
+        <article class="download-card featured"><div class="platform">⊞</div><h3>DocVault for Windows</h3><small>DocVault.exe</small><p>A focused desktop experience for managing your documents on Windows.</p><div class="download-actions"><a class="button primary" href="https://github.com/suvansh850-lab/my-site/releases/download/Pre-1.0.0/DocVault.exe" download>Download .exe ↓</a><button class="button ghost copy-button" data-url="https://github.com/suvansh850-lab/my-site/releases/download/Pre-1.0.0/DocVault.exe">Copy link</button></div></article>
+        <article class="download-card"><div class="platform">◆</div><h3>DocVault for Android</h3><small>DocVault.apk</small><p>Take your documents with you and access them wherever you go.</p><div class="download-actions"><a class="button primary" href="https://github.com/suvansh850-lab/my-site/releases/download/Pre-1.0.0/DocVault.apk" download>Download .apk ↓</a><button class="button ghost copy-button" data-url="https://github.com/suvansh850-lab/my-site/releases/download/Pre-1.0.0/DocVault.apk">Copy link</button></div></article>
       </div>
-      <div class="info">💡 <strong>Tip:</strong> Windows may ask you to confirm the download. On Android, enable installation from this source if your device asks for permission.</div>
+      <div class="tip"><span>💡</span><span><strong>Quick tip:</strong> Android may ask you to allow installation from this source.</span></div>
     </section>
+
+    <section id="about" class="section"><div class="section-head"><div><div class="kicker">Why DocVault</div><h2>Simple by design.</h2></div></div><p class="hero-copy">No clutter, no complicated setup. DocVault gives you a clean place for the files that matter, with fast downloads and a calm interface that stays out of your way.</p></section>
   </main>
 
-  <footer>Made with curiosity and a little bit of code · <span id="year"></span></footer>
+  <footer class="page">Made with curiosity and a little bit of code · <span id="year"></span></footer>
   <div class="toast" id="toast" role="status" aria-live="polite">Link copied!</div>
   <script>
     const body=document.body,themeToggle=document.querySelector('#themeToggle');
@@ -74,10 +61,8 @@
     themeToggle.addEventListener('click',()=>{body.classList.toggle('dark');localStorage.setItem('theme',body.classList.contains('dark')?'dark':'light');updateThemeIcon()});
     const toast=document.querySelector('#toast');
     function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}
-    document.querySelectorAll('.copy-button').forEach(button=>button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(button.dataset.url);showToast('Download link copied!')}catch{showToast('Copy failed');}}));
+    document.querySelectorAll('.copy-button').forEach(button=>button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(button.dataset.url);showToast('Download link copied!')}catch{showToast('Copy failed')}}));
     document.querySelector('#year').textContent=new Date().getFullYear();
-    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')}),{threshold:.15});
-    document.querySelectorAll('.reveal').forEach(element=>observer.observe(element));
   </script>
 </body>
 </html>
